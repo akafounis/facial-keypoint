@@ -11,7 +11,11 @@ For Encoder was used a Convolutional neural network. Its architecture consists o
 The fully connected layers of the model are combined with ReLU activation function and Dropout layers.
 
 
-Results:
+**Results:** 
+
+
+__Red: Prediction \
+Purple: Ground Truth__
 
 ![alt text](Results-1.png)
 
