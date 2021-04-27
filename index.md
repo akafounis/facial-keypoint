@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+The goal of this project is to build a deep learning model that is able to correctly classify each pixel of the image. The **MSRC-v2 Dataset** was used for training and testing the model. It contains 591 Images and 23 different objects (classes). 
+The Model consists of two parts: 
 
-You can use the [editor on GitHub](https://github.com/akafounis/facial-keypoint/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+1. Encoder
+2. Decoder
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+For Encoder was used the pre-trained mobilenet_v2. Only the downsampling layers were kept. Various architectures were tested for the decoder in order to find which delivers the better results. The final architecture of
+the decoder consists of repeated Convolutional, Batch Normalization and Upsampling layers. ReLU turned out to be the most promising activation function in this case.
 
-### Markdown
+The final model delivered an accuracy of **82.79 %**
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Results:
 
-```markdown
-Syntax highlighted code block
+Given RGB photo: \
+![alt text](Result-1.jpg)
 
-# Header 1
-## Header 2
-### Header 3
+and the Depth photo: \
+![alt text](SS-Result-1.jpg)
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/akafounis/facial-keypoint/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+PyTorch was used for the development of the model.
