@@ -1,4 +1,4 @@
-![alt text](FACE-DET.jpg)
+<img src="FACE2.jpg" width="400">
 
 The goal of this project is to build a deep learning model that is able to detect important keypoints on the human face. These keypoints mark important areas of the face like the eyes, corners of the mouth, the nose, etc. and are relevant for a variety of computer vision tasks, such as face filters, emotion recognition, pose recognition, and more.
 
