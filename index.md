@@ -2,19 +2,18 @@ The goal of this project is to build a deep learning model that is able to corre
 The Model consists of two parts: 
 
 1. Encoder
-2. Decoder
+2. Fully Connected Layers
 
-For Encoder was used the pre-trained mobilenet_v2. Only the downsampling layers were kept. Various architectures were tested for the decoder in order to find which delivers the better results. The final architecture of
-the decoder consists of repeated Convolutional, Batch Normalization and Upsampling layers. ReLU turned out to be the most promising activation function in this case.
+For Encoder was used a Convolutional neural network. Its architecture consists of Convolutional, Max Pooling and Dropout layers. Exponential Linear Unit turned out to be the most suitable activation function for the encoder.
+The fully connected layers of the model are combined with ReLU activation function and Dropout layers.
 
-The final model delivered an accuracy of **82.79 %**
 
 Results:
 
-Given RGB photo: \
-![alt text](Result-1.jpg)
+![alt text](Results-1.png)
 
-and the Depth photo: \
-![alt text](SS-Result-1.jpg)
+![alt text](Results-2.png)
 
-PyTorch was used for the development of the model.
+![alt text](Results-3.png)
+
+**PyTorch** was used for the development of the model.
